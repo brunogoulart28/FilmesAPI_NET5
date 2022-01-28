@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using FilmesAPI.Models;
+using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
 
 namespace FilmesAPI.Controllers
 {
@@ -6,5 +8,10 @@ namespace FilmesAPI.Controllers
     [Route("controller")]
     public class FilmeController : ControllerBase
     {
+        private static List<Filme> filmes = new List<Filme>();
+        public void AdicionarFilme(Filme filme)
+        {
+            filmes.Add(filme);
+        }
     }
 }
