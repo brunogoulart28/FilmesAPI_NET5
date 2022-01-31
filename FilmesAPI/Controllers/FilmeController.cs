@@ -31,7 +31,7 @@ namespace FilmesAPI.Controllers
         public IActionResult RecuperaFilmesPorId(int id)
         {
             Filme filme = filmes.FirstOrDefault(filme => filme.Id == id);
-            if(filme != null)
+            if (filme != null)
             {
                 return Ok(filme);
             }
@@ -39,3 +39,4 @@ namespace FilmesAPI.Controllers
         }
     }
 }
+
